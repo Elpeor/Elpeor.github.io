@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="Registro">    
+        <h2>Registro</h2><br>
+        Nombre completo<br>
+        <input id="nombre"type="text" placeholder="Nombre completo"required><br><br>Correo<br>
+        <input id="correo"type="text" placeholder="Correo"required><br><br>Contraseña<br>
+        <input id="pass1"type="password" placeholder="Contraseña"required><br><br>Confirmar contraseña<br>
+        <input id="pass2"type="password" placeholder="Confirmar contraseña"required><br><br>Teléfono (opcional)<br>
+        <input id="telefono"type="text" placeholder="Teléfono (opcional)"><br><br>
+        <input type="submit" value="Registrarse">
+    </form>
+
+    <div class="Contenedor_flex">
+        <select name="select1" id="select1">
+            <option value=null selected>-- Seleccione la Region --</option>
+            <option value="Santiago">Region Metropolitana de Santiago</option>
+            <option value="Araucania">Region de la Araucania</option>
+            <option value="Ñuble">Region de Ñuble</option>
+        </select>
+
+        <select name="select2" id="select2">
+            <option value=null selected>-- Seleccione la Comuna --</option>
+        </select> 
+    </div>
+    
+    <script src="Scripts/registro.js"></script>
+</body>
+</html>
