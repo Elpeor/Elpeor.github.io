@@ -5,32 +5,34 @@ var opcionesComuna ={
 }
 
 
-document.getElementById("select1").addEventListener("change", function(e){
-    var select2 = document.getElementById("select2")
+document.getElementById("sel_region").addEventListener("change", function(e){
+    var sel_comuna = document.getElementById("sel_comuna")
     var Optsel = e.target.value;
     
     if (Optsel !== "null"){
-        if (select2.length <= 1){
+        if (sel_comuna.length <= 1){
             opcionesComuna[Optsel].forEach(item => {
                 var opcion = document.createElement('option')
                 opcion.value = item.toLowerCase();
                 opcion.textContent = item;
-                select2.appendChild(opcion);
+                sel_comuna.appendChild(opcion);
             });
             
         }else{
-            for (var i = select2.length - 1; i >= 1; i--) {
-            select2.remove(i);
+            for (var i = sel_comuna.length - 1; i >= 1; i--) {
+            sel_comuna.remove(i);
         }
         opcionesComuna[Optsel].forEach(item => {
                 var opcion = document.createElement('option')
                 opcion.value = item.toLowerCase();
                 opcion.textContent = item;
-                select2.appendChild(opcion);
+                sel_comuna.appendChild(opcion);
             });
         }
     }else{
-        return false;
+        for (var i = sel_comuna.length - 1; i >= 1; i--) {
+            sel_comuna.remove(i);
+        }
     }
 
 });
