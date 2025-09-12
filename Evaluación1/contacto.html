@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <h1>Contacto</h1>
+    <form id="contactoForm" method="post">
+        <label>Nombre:</label>
+        <input type="text" id="contactoNombre" name="nombre" maxlength="100" minlength="3" required><br>
+        <label>Email:</label>
+        <input type="email" id="contactoEmail" name="email" maxlength="100" required><br>
+        <label>Mensaje:</label>
+        <textarea id="contactoMensaje" name="mensaje" maxlength="500" minlength="10" required></textarea><br>
+        <button type="submit">Enviar</button>
+        <p id="mensajeError" style="color: red;"></p>
+    </form>
+    <a href="principal.html">Volver a home</a>
+    <script src="Scripts/contacto.js"></script>
+</body>
+</html>

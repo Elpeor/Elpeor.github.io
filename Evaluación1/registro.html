@@ -10,11 +10,11 @@
     <form id="Registro">    
         <h2>Registro</h2><br>
         Nombre completo<br>
-        <input id="nombre"type="text" placeholder="Nombre completo"required><br><br>Correo<br>
-        <input id="correo"type="text" placeholder="Correo"required><br><br>Contraseña<br>
-        <input id="pass1"type="password" placeholder="Contraseña"required><br><br>Confirmar contraseña<br>
-        <input id="pass2"type="password" placeholder="Confirmar contraseña"required><br><br>Teléfono (opcional)<br>
-        <input id="telefono"type="text" placeholder="Teléfono (opcional)"><br><br>
+        <input id="nombreReg"type="text" placeholder="Nombre completo" maxlength="100" required><br><br>Correo<br>
+        <input id="correoReg"type="text" placeholder="Correo" maxlength="100" required><br><br>Contraseña<br>
+        <input id="pass1Reg"type="password" placeholder="Contraseña"required><br><br>Confirmar contraseña<br>
+        <input id="pass2Reg"type="password" placeholder="Confirmar contraseña"required><br><br>Teléfono (opcional)<br>
+        <input id="telefonoReg"type="text" placeholder="Teléfono (opcional)"><br><br>
         <input type="submit" value="Registrarse">
     </form>
 
@@ -30,6 +30,7 @@
             <option value=null selected>-- Seleccione la Comuna --</option>
         </select> 
     </div>
+    <p id="mensajeErrorReg" style="color: red;"></p>
     
     <script src="Scripts/registro.js"></script>
 </body>
