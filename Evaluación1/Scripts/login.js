@@ -17,5 +17,5 @@ document.getElementById("login").addEventListener("submit", function(e){
     var formData = new FormData(e.target);
     var data = Object.fromEntries(formData);
 
-    valUsuario(data["correo"], data["contrasena"]);
+    valUsuario(data["logCorreo"], data["logPass"]);
 })

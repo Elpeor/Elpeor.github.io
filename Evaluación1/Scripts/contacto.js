@@ -1,5 +1,15 @@
 // Lista con dominios de correo validos
 const dominioCorreo = ["@duoc.cl","@gmail.com","@profesor.duoc.cl"];
+function valNombreContacto(){
+    const characters = /^[\p{L}\s]+$/u;
+    let nombre = document.getElementById("contactoNombre").value;
+    if(!characters.test(nombre)){
+        console.log("nombre invalido, solo puede contener letras");
+        return false;
+    }
+    console.log("nombre valido")
+    return true;
+}
 function valCorreoContacto(){
     let correo = document.getElementById("contactoEmail").value.toLowerCase();
     let mensajeError = document.getElementById("mensajeError");
@@ -22,5 +32,6 @@ document.getElementById("contactoForm").addEventListener("submit", function(e){
     e.preventDefault();
     var formData = new FormData(e.target);
     var data = Object.fromEntries(formData);
-    valCorreoContacto(data["contactoEmail"])
+    valNombreContacto(data["contactoNombre"]);
+    valCorreoContacto(data["contactoEmail"]);
 })

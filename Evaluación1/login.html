@@ -10,10 +10,10 @@
     <div id = login>
         <form id="loginForm">
             <label id= "logCorreo" for="correo">Correo:</label>
-            <input type="text" id="correo" name="correo" required>
+            <input type="text" id="correo" name="correo" maxlength="100" minlength="3" required>
             <br>
             <label id="logPass" for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
+            <input type="password" id="contrasena" name="contrasena" minlength="4" maxlength="10" required>
             <br>
             <input type="submit" value="Iniciar Sesión">
         </form>

@@ -10,10 +10,10 @@
     <form id="Registro">    
         <h2>Registro</h2><br>
         Nombre completo<br>
-        <input id="nombreReg"type="text" placeholder="Nombre completo" maxlength="100" required><br><br>Correo<br>
+        <input id="nombreReg"type="text" placeholder="Nombre completo" maxlength="100" minlength="3" required><br><br>Correo<br>
         <input id="correoReg"type="text" placeholder="Correo" maxlength="100" required><br><br>Contraseña<br>
-        <input id="pass1Reg"type="password" placeholder="Contraseña"required><br><br>Confirmar contraseña<br>
-        <input id="pass2Reg"type="password" placeholder="Confirmar contraseña"required><br><br>Teléfono (opcional)<br>
+        <input id="pass1Reg"type="password" placeholder="Contraseña" minlength="4" maxlength="10" required><br><br>Confirmar contraseña<br>
+        <input id="pass2Reg"type="password" placeholder="Confirmar contraseña" minlength="4" maxlength="10" required><br><br>Teléfono (opcional)<br>
         <input id="telefonoReg"type="text" placeholder="Teléfono (opcional)"><br><br>
         <input type="submit" value="Registrarse">
     </form>
