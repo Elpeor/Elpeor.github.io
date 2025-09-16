@@ -4,25 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles/productoStyle.css">
 </head>
 <body>
 
+    <!---- navbar ----->
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+        <div class="d-flex align-items-center justify-content-between w-100">
+            <a class="navbar-brand" href="principal.html">El Italiano</a>
+            <div class="d-flex align-items-center">
+                <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>
+                <span id="icon-cart-quantity">0</span>
+                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="principal.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Producto.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+
     <div id="app"></div>
     <div id="contenidoTemporal">
-        <div class="titulo">
+        <h2 id="titulo_dprod" class="titulo">
             producto detalle
-        </div>
-        <div class="detalle">
-            <div id="imagen_dprod" class="imagen">
-                <img src="IMG/redacted.png" alt="">
+        </h2>
+        <div id="temporal" class="col">
+            <div  class="imagen">
+                <img id="imagen_dprod" src="IMG/redacted.png" alt="" width="1000">
             </div>
             <div class="contenido">
-                <div id="nombre_dprod" class="nombre"> nombre</div>
                 <div id="precio_dprod" class="precio">1000</div>
                 <div class="botones">
-                    <button class="añadirCarrito"> 
-                        añadir al carro
-                    </button>
+                    <button id="agregarCarro" class="btn btn-dark w-100">Agregar al carrito</button>
 
                 </div>
                 <div  class="descripcion">
@@ -33,6 +70,20 @@
 
         <div class="listaProductos">
             
+        </div>
+    </div>
+
+
+    <!--Carro tab-->
+    <div class="carroTab">
+        <h1>Carrito</h1>
+        <div class="listaCarro">
+            <div class="producto">
+            </div>
+        </div>
+        <div class="btn">
+            <button class="cerrar">CERRAR</button>
+            <button class="checkOut">CHECKOUT</button>
         </div>
     </div>
 
@@ -68,5 +119,6 @@
     </div> -->
     
     <script src="Scripts/d_producto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

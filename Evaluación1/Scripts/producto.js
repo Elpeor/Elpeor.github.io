@@ -73,7 +73,6 @@ const agregarCarritoHTML = () => {
             let productoInfo = listaProductos[posicionProducto];
             nuevoProductoCarro.innerHTML = `
             <div class="image">
-                
                 <img src="${productoInfo.imagen}" class="img-fluid" >
             </div>
             <div class="name">
@@ -98,6 +97,7 @@ listaProductosHTML.addEventListener("click", (event)=>{
         let productoCol = posicionClick.closest(".col");
         if(productoCol){
             let productoId = productoCol.dataset.id;
+            console.log(productoId)
             agregarCarrito(productoId);
         }
     }
