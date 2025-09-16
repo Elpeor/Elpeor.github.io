@@ -6,12 +6,15 @@ var opcionesComuna ={
 }
 const dominioCorreo = ["@duoc.cl","@gmail.com","@profesor.duoc.cl"];
 var users = []
-
+//
 function valNombreReg(){
+    let mensajeNombre = document.getElementById("mensajeNombre");
+    mensajeNombre.innerText = "";
     const characters = /^[\p{L}\s]+$/u;
     let nombre = document.getElementById("nombreReg").value;
     if(!characters.test(nombre)){
         console.log("nombre invalido, solo puede contener letras");
+        mensajeNombre.innerText = "El nombre solo puede contener letras y espacios";
         return null;
     }
     console.log("nombre valido")
@@ -20,8 +23,8 @@ function valNombreReg(){
 // Validacion correo
 function valCorreoReg(){
     let correo = document.getElementById("correoReg").value.toLowerCase();
-    let mensajeError = document.getElementById("mensajeErrorReg");
-    mensajeError.innerText = "";
+    let mensajeCorreo = document.getElementById("mensajeCorreo");
+    mensajeCorreo.innerText = "";
     // Recorrer la lista de dominios validos
     for(let i=0; i<dominioCorreo.length; i++){
         if(correo.endsWith(dominioCorreo[i])){
@@ -31,33 +34,62 @@ function valCorreoReg(){
     }
     // Si no se encuentra mostrar error en pantalla y retornar falso
     console.log(correo + " no valido");
-    mensajeError.innerText = "Correo no valido, debe terminar en @duoc.cl, @gmail.com o @profesor.duoc.cl";
+    mensajeCorreo.innerText = "Correo no valido, debe terminar en @duoc.cl, @gmail.com o @profesor.duoc.cl";
     return null;
 }
 function valPasswordReg(){
+    let mensajePass1 = document.getElementById("mensajePass1");
+    mensajePass1.innerText = "";
+    let mensajePass2 = document.getElementById("mensajePass2");
+    mensajePass2.innerText = "";
     //Lista de caracteres especiales
     const specialChar = /[-_!#$&.,*+|¡¿?'()]/;
     var pass1 = document.getElementById("pass1Reg").value;
     var pass2 = document.getElementById("pass2Reg").value;
-    // Condicion de contraseñas iguales
-    if(pass1 != pass2){
-        console.log("Contraseñas no coinciden");
-        return null;
-    }
     // Si contraseña no contiene caracteres especiales retorna null
     if(!specialChar.test(pass1)){
         console.log("Contraseña debe contener algun caracter especial");
+        mensajePass1.innerText = "La contraseña debe contener al menos un caracter especial";
+        return null;
+    }
+     // Condicion de contraseñas iguales
+    if(pass1 != pass2){
+        console.log("Contraseñas no coinciden");
+        mensajePass2.innerText = "Las contraseñas no coinciden";
         return null;
     }
     return pass2;
 }
+
+function valRegistro(){
+    let nombre = valNombreReg();
+    let correo = valCorreoReg();
+    let password = valPasswordReg();
+    let mensajeReg = document.getElementById("mensajeReg");
+    mensajeReg.innerText = "";
+    if(nombre && correo && password){
+        console.log("formulario valido");
+        mensajeReg.innerText = "Registro exitoso";
+        users.push({
+        nombre: nombre,
+        correo: correo,
+        password: password
+        });
+        return true;
+    }
+    console.log("formulario invalido");
+    mensajeReg.innerText = "Registro invalido, revise los campos";
+    return false;
+}
+
 document.getElementById("Registro").addEventListener("submit", function(e){
     e.preventDefault();
-    var formData = new FormData(e.target);
-    var data = Object.fromEntries(formData);
-    valNombreReg(data["nombreReg"])
-    valCorreoReg(data["correoReg"])
-    valPasswordReg(data["pass1Reg"])
+    if (valRegistro()){
+        window.localStorage.setItem("users", JSON.stringify(users));
+        e.target.reset();
+    }
+    
+
 })
 // Listener para select region y comunas
 document.getElementById("sel_region").addEventListener("change", function(e){
@@ -91,3 +123,14 @@ document.getElementById("sel_region").addEventListener("change", function(e){
     }
 
 });
+
+let iconoCarro = document.querySelector(".icon-cart")
+let cerrarCarro = document.querySelector(".cerrar");
+let body = document.querySelector("body");
+// Listener para abrir y cerrar el carro
+iconoCarro.addEventListener("click", ()=>{
+    body.classList.toggle("mostrarCarro")
+})
+cerrarCarro.addEventListener("click", ()=>{
+    body.classList.toggle("mostrarCarro")
+})

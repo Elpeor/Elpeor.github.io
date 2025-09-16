@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos para la barra de navegación */
+.custom-navbar{
+    background-color: rgba(44, 62, 80, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+svg{
+    color: white;
+    width: 30px;
+}
+.navbar-brand{
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #FFD700 !important;
+    text-decoration: solid;
+}
+.icon-cart{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.icon-cart span{
+    display: inline-flex;
+    width: 20px;
+    height: 23px;
+    background-color: red;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -12px;
+}
+.navbar-nav .nav-link{
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.navbar-nav .nav-link::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #FFD700;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.navbar-nav .nav-link:hover::after{
+    width: 100%;
+}
+.navbar-nav .nav-link:hover{
+    color: #FFD700 !important;
+}
+.navbar-toggler{
+    border: none;
+    padding: 10px 8px;
+    margin: 0 5px;
+}
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}
+/*Estilos para el carrito */
+.carroTab{
+    width: 400px;
+    background-color: rgba(44, 62, 80, 0.95);
+    color: #FFD700;
+    position: fixed;
+    top: var(--bs-navbar-height, 68px);
+    right: -400px;
+    bottom: 0;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+@media  (max-width: 576px){
+    .carroTab{
+        width: 100%;
+        right: -100%;
+    }
+    .body.mostrarCarro .carroTab{
+        right: 0;
+    }
+    .carroTab .listaCarro .producto{
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+        text-align: left;
+    }
+    .carroTab .listaCarro .producto img{
+        width: 100px;
+        height: 100px;
+        margin: auto;
+    }
+    .carroTab .listaCarro .producto .name{
+        font-size: 1.1em;
+    }
+    .carroTab .listaCarro .producto .totalPrice{
+        font-size: 1.2em;
+    }
+    .carroTab .listaCarro .producto .cantidad{
+        margin-top: 10px;
+    }
+}
+body.mostrarCarro .carroTab{
+    top: var(--bs-navbar-height, 68px);
+    right: 0px;
+    bottom: 0;
+}
+.carroTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 500;
+}
+.carroTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.carroTab .btn button{
+    background-color: #FFD700;
+    border: none;
+    font-weight: 500;
+    font-size: small;
+    cursor: pointer;
+}
+.carroTab .btn .cerrar{
+    background-color: #eee;
+}
+/* registro */
+.registration-section {
+            padding: 100px 0;
+            background: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .registration-container {
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .registration-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .registration-form::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: rgb(156, 11, 11);
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control,
+        .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1rem 0.75rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #9c0b0b;
+            box-shadow: 0 0 0 0.2rem rgba(156, 11, 11, 0.25);
+            background-color: #fff;
+        }
+
+        .form-control::placeholder {
+            color: #adb5bd;
+            opacity: 1;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            min-height: 1rem;
+        }
+
+        .btn-submit {
+            background: #9c0b0b;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #a01729, #c82333);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .form-row {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+@media (max-width: 768px) {
+            .registration-container {
+                max-width: 95%;
+            }
+            
+            .registration-form {
+                padding: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+.form-control.is-valid,
+        .form-select.is-valid {
+            border-color: #198754;
+        }
+
+        .form-control.is-invalid,
+        .form-select.is-invalid {
+            border-color: #dc3545;
+        }
