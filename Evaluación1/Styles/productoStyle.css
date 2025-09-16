@@ -71,3 +71,148 @@ svg{
     outline: none;
     box-shadow: none;
 }
+/* Estilos para la lista de productos */
+.card {
+    background-color: #eeeee6;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: large;
+}
+
+.card-text {
+    letter-spacing: 1px;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.btn-dark {
+    background-color: #353432;
+    border: none;
+    border-radius: 20px;
+    color: #eee;
+}
+
+.btn-dark:hover {
+    background-color: #555452;
+}
+/* Estilos para el carrito de compras */
+.carroTab{
+    width: 400px;
+    background-color: rgba(44, 62, 80, 0.95);
+    color: #FFD700;
+    position: fixed;
+    top: var(--bs-navbar-height, 68px);
+    right: -400px;
+    bottom: 0;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+@media  (max-width: 576px){
+    .carroTab{
+        width: 100%;
+        right: -100%;
+    }
+    .body.mostrarCarro .carroTab{
+        right: 0;
+    }
+    .carroTab .listaCarro .producto{
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+        text-align: left;
+    }
+    .carroTab .listaCarro .producto img{
+        width: 100px;
+        height: 100px;
+        margin: auto;
+    }
+    .carroTab .listaCarro .producto .name{
+        font-size: 1.1em;
+    }
+    .carroTab .listaCarro .producto .totalPrice{
+        font-size: 1.2em;
+    }
+    .carroTab .listaCarro .producto .cantidad{
+        margin-top: 10px;
+    }
+}
+body.mostrarCarro .carroTab{
+    top: var(--bs-navbar-height, 68px);
+    right: 0px;
+    bottom: 0;
+}
+.carroTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 500;
+}
+.carroTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.carroTab .btn button{
+    background-color: #FFD700;
+    border: none;
+    font-weight: 500;
+    font-size: small;
+    cursor: pointer;
+}
+.carroTab .btn .cerrar{
+    background-color: #eee;
+}
+/* Estilos para la lista de productos en el carrito */
+.carroTab .listaCarro .producto .image{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 8px;
+
+}
+.carroTab .listaCarro .producto .image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.carroTab .listaCarro .producto{
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+.listaCarro .cantidad span{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.listaCarro .cantidad span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+}
+.listaCarro .producto:nth-child(even){
+    background-color: #eee1;
+}
+.listaCarro{
+    overflow: auto;
+
+}
+.listaCarro::-webkit-scrollbar{
+    width: 0;
+}

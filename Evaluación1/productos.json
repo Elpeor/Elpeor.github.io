@@ -1,0 +1,56 @@
+[
+{
+    "id": 1,
+    "nombre": "Pizza Margarita",
+    "precio": 7990,
+    "imagen": "IMG/pizza.jpg"
+},
+{
+    "id": 2,
+    "nombre": "Pizza Pepperoni",
+    "precio": 8990,
+    "imagen": "IMG/peperoni.jpg"
+},
+{
+    "id": 3,
+    "nombre": "Lasagna clasica",
+    "precio": 10990,
+    "imagen": "IMG/lasagna.jpg"
+},
+{
+    "id": 4,
+    "nombre": "Espirales a la bolognesa",
+    "precio": 9990,
+    "imagen": "IMG/espirales.jpg"
+},
+{
+    "id": 5,
+    "nombre": "Spaghetti con albondigas",
+    "precio": 7990,
+    "imagen": "IMG/spaghetti-albondigas.jpg"
+},
+{
+    "id": 6,
+    "nombre": "Fetuccine Alfredo",
+    "precio": 9990,
+    "imagen": "IMG/alfredo.jpg"
+},
+{
+    "id": 7,
+    "nombre": "Pasta al pesto",
+    "precio": 9990,
+    "imagen": "IMG/pesto.jpg"
+},
+{
+    "id": 8,
+    "nombre": "Focaccia",
+    "precio": 5990,
+    "imagen": "IMG/focaccia.jpg"
+},
+{
+    "id": 9,
+    "nombre": "Pasta alla puttanesca",
+    "precio": 9990,
+    "imagen": "IMG/puttanesca.jpg"
+}
+]
