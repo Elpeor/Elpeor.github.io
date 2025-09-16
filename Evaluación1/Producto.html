@@ -1,91 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="Styles/productoStyle.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Styles/productoStyle.css"><!-- mantiene tu navbar y paleta -->
+  <link rel="stylesheet" href="Styles/theme.css"><!-- refuerza mapping a Bootstrap -->
 </head>
 <body>
-    <!---- Navbar ----->
-     <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+
+  <!-- Navbar existente con tu estilo -->
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
     <div class="container">
-        <div class="d-flex align-items-center justify-content-between w-100">
-            <a class="navbar-brand" href="principal.html">El Italiano</a>
-            <div class="d-flex align-items-center">
-                <div class="icon-cart">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
-                </svg>
-                <span>0</span>
-                </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+      <div class="d-flex align-items-center justify-content-between w-100">
+        <a class="navbar-brand" href="principal.html">El Italiano</a>
+        <div class="d-flex align-items-center">
+          <div class="icon-cart">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+            </svg>
+            <span>0</span>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="principal.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="Producto.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Productos en grid -->
+  <main class="container py-5">
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4">
+        <div class="card h-100 shadow-lg border-0 rounded-4 position-relative bg-light">
+          <div class="overflow-hidden position-relative">
+            <img id="IMG_pizza1" class="card-img-top rounded-top-4" src="" alt="Pizza margarita">
+          </div>
+          <div class="card-body text-center d-flex flex-column">
+            <h5 id="NOM_pizza1" class="card-title fw-bold">REDACTED</h5>
+            <span id="PRE_pizza1" class="text-primary fs-5 fw-bold">$11.590</span>
+            <button id="BOT_pizza1" class="btn btn-dark mt-auto rounded-pill fw-bold" data-cart-control="load-item" data-menu-id="920">
+              <i class="fas fa-shopping-cart me-1"></i> ¡Pídelo ya!
             </button>
+          </div>
         </div>
-        </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="principal.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="registro.html">Registro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Producto.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-<!-- Productos -->
-    <div class="col-sm-4 col-6">
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
         <div class="card h-100 shadow-lg border-0 rounded-4 position-relative bg-light">
-            <div class="overflow-hidden position-relative">
-                <img id="IMG_pizza1" class="card-img-top rounded-top-4" src="" alt="Pizza margarita">
-                
-            </div>
-                            
-            <div class="card-body text-center d-flex flex-column">
-                <h5 id="NOM_pizza1" class="card-title fw-bold ">REDACTED</h5>
-                <span id="PRE_pizza1" class="text-primary fs-5 fw-bold">$11.590</span>
-
-                <button id="BOT_pizza1" class="btn btn-primary mt-auto rounded-pill fw-bold" data-cart-control="load-item" data-menu-id="920">
-                    <i class="fas fa-shopping-cart me-1"></i> ¡Pídelo ya!
-                </button>
-            </div>
+          <div class="overflow-hidden position-relative">
+            <img id="IMG_lasagna1" class="card-img-top rounded-top-4" src="https://tienda.lapiccolaitalia.cl/assets/media/attachments/public/665/bd9/162/thumb_605_250_250_contain_48a4b15e.jpg" alt="Lasagna">
+            <span class="badge bg-primary position-absolute top-0 start-0 m-2">Favorito</span>
+          </div>
+          <div class="card-body text-center d-flex flex-column">
+            <h5 id="NOM_lasagna1" class="card-title fw-bold"></h5>
+            <span id="PRE_lasagna1" class="text-primary fs-5 fw-bold">$11.590</span>
+            <button id="BOT_lasagna1" class="btn btn-dark mt-auto rounded-pill fw-bold" data-cart-control="load-item" data-menu-id="920">
+              <i class="fas fa-shopping-cart me-1"></i> ¡Pídelo ya!
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+  </main>
 
-
-    <div class="col-sm-4 col-6">
-        <div class="card h-100 shadow-lg border-0 rounded-4 position-relative bg-light">
-            <div class="overflow-hidden position-relative">
-                <img id="IMG_lasagna1" class="card-img-top rounded-top-4" src="https://tienda.lapiccolaitalia.cl/assets/media/attachments/public/665/bd9/162/thumb_605_250_250_contain_48a4b15e.jpg" alt="Lasagna">
-                <span class="badge bg-primary position-absolute top-0 start-0 m-2">Favorito</span>
-            </div>
-                            
-            <div class="card-body text-center d-flex flex-column">
-                <h5 id="NOM_lasagna1" class="card-title fw-bold "></h5>
-                <span id="PRE_lasagna1" class="text-primary fs-5 fw-bold">$11.590</span>
-
-                <button id="BOT_lasagna1" class="btn btn-primary mt-auto rounded-pill fw-bold" data-cart-control="load-item" data-menu-id="920">
-                    <i class="fas fa-shopping-cart me-1"></i> ¡Pídelo ya!
-                </button>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="Scripts/producto.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="Scripts/producto.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
