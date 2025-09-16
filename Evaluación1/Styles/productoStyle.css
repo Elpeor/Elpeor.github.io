@@ -14,7 +14,7 @@ svg{
     color: white;
     width: 30px;
 }
-.navbar-brand{
+.navbar-brand .brandNav{
     font-weight: 700;
     font-size: 1.8rem;
     color: #FFD700 !important;
