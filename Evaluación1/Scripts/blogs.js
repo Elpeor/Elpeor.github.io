@@ -1,5 +1,5 @@
 var blogs = [
-    {"id":1, "titulo":"Monstruo de spaghetti suelto","descripcion":"Monstruo de spaghetti corre libre tras su escape de los bunkers subterraneos de chernobyl", "imagen":"IMG/espageti.png", "boton":"BOT_mon_spa"},
+    {"id":1, "titulo":"Pronto a anunciarse ganador del concurso","descripcion":"En unas horas se anunciará al ganador del sortéo de un mes gratis de pedidos en El Italiano", "imagen":"IMG/sorteo.jpg", "boton":"BOT_sorte"},
     {"id":2, "titulo":"Comida recalentada?","descripcion":"Se sospecha que El italiano utiliza platos pre-hechos y que los recalienta en microondas a la hora de servirlos", "imagen":"IMG/recalentao.jpg", "boton":"BOT_recal"}
 ];
 
