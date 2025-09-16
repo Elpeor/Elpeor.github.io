@@ -47,75 +47,85 @@
             </div>
         </div>
     </nav>
+ <section class="registration-section">
+        <div class="container">
+            <div class="registration-container">
+                <h2 class="section-title">Registrate aqui</h2>
+                <p class="section-subtitle">Crea tu cuenta para recibir unicos descuentos</p>
+                
+                <div class="registration-form">
+                    <form id="Registro">
+                        <div class="form-row">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombreReg" class="form-label">Nombre completo</label>
+                                    <input id="nombreReg" type="text" class="form-control form-control-lg" placeholder="Nombre completo" maxlength="100" minlength="3" required>
+                                    <p id="mensajeNombre" class="error-message"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="correoReg" class="form-label">Correo</label>
+                                    <input id="correoReg" type="text" class="form-control form-control-lg" placeholder="Correo" maxlength="100" required>
+                                    <p id="mensajeCorreo" class="error-message"></p>
+                                </div>
+                            </div>
+                        </div>
 
-  <main class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 col-lg-6">
-        <div class="card shadow-lg border-0 rounded-4">
-          <div class="card-body p-4 p-md-5">
-            <h2 class="h4 text-center mb-4">Registro</h2>
+                        <div class="form-row">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="pass1Reg" class="form-label">Contraseña</label>
+                                    <input id="pass1Reg" type="password" class="form-control form-control-lg" placeholder="Contraseña" minlength="4" maxlength="10" required>
+                                    <p id="mensajePass1" class="error-message"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="pass2Reg" class="form-label">Confirmar contraseña</label>
+                                    <input id="pass2Reg" type="password" class="form-control form-control-lg" placeholder="Confirmar contraseña" minlength="4" maxlength="10" required>
+                                    <p id="mensajePass2" class="error-message"></p>
+                                </div>
+                            </div>
+                        </div>
 
-            <form id="Registro" novalidate>
-              <div class="mb-3">
-                <label for="nombreReg" class="form-label">Nombre completo</label>
-                <input id="nombreReg" type="text" class="form-control form-control-lg" placeholder="Nombre completo" maxlength="100" minlength="3" required>
-                <p id="mensajeNombre" class="error-message"></p>
-              </div>
+                        <div class="form-row">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="telefonoReg" class="form-label">Teléfono (opcional)</label>
+                                    <input id="telefonoReg" type="number" minlength="9" maxlength="9" class="form-control form-control-lg" placeholder="Teléfono (opcional)">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sel_region" class="form-label">Región</label>
+                                    <select id="sel_region" name="sel_region" class="form-select form-select-lg">
+                                        <option value=null selected>-- Seleccione la Región --</option>
+                                        <option value="Santiago">Región Metropolitana de Santiago</option>
+                                        <option value="Araucania">Región de la Araucanía</option>
+                                        <option value="Ñuble">Región de Ñuble</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
-              <div class="mb-3">
-                <label for="correoReg" class="form-label">Correo</label>
-                <input id="correoReg" type="text" class="form-control form-control-lg" placeholder="Correo" maxlength="100" required>
-                <p id="mensajeCorreo" class="error-message"></p>
-              </div>
+                        <div class="form-row">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="sel_comuna" class="form-label">Comuna</label>
+                                    <select id="sel_comuna" name="sel_comuna" class="form-select form-select-lg">
+                                        <option value=null selected>-- Seleccione la Comuna --</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Empty column for balance -->
+                                </div>
+                            </div>
+                        </div>
 
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="pass1Reg" class="form-label">Contraseña</label>
-                  <input id="pass1Reg" type="password" class="form-control form-control-lg" placeholder="Contraseña" minlength="4" maxlength="10" required>
-                  <p id="mensajePass1" class="error-message"></p>
+                        <p id="mensajeReg" class="text-danger mt-2"></p>
+
+                        <button type="submit" class="btn-submit">Registrarse</button>
+                    </form>
                 </div>
-                <div class="col-md-6">
-                  <label for="pass2Reg" class="form-label">Confirmar contraseña</label>
-                  <input id="pass2Reg" type="password" class="form-control form-control-lg" placeholder="Confirmar contraseña" minlength="4" maxlength="10" required>
-                  <p id="mensajePass2" class="error-message"></p>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="telefonoReg" class="form-label">Teléfono (opcional)</label>
-                <input id="telefonoReg" type="number" minlength="9" maxlength="9" class="form-control form-control-lg" placeholder="Teléfono (opcional)">
-              </div>
-
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="sel_region" class="form-label">Región</label>
-                  <select id="sel_region" name="sel_region" class="form-select form-select-lg">
-                    <option value=null selected>-- Seleccione la Región --</option>
-                    <option value="Santiago">Región Metropolitana de Santiago</option>
-                    <option value="Araucania">Región de la Araucanía</option>
-                    <option value="Ñuble">Región de Ñuble</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label for="sel_comuna" class="form-label">Comuna</label>
-                  <select id="sel_comuna" name="sel_comuna" class="form-select form-select-lg">
-                    <option value=null selected>-- Seleccione la Comuna --</option>
-                  </select>
-                </div>
-              </div>
-
-              <p id="mensajeReg" class="text-danger mt-2"></p>
-
-              <div class="d-grid mt-3">
-                <button type="submit" class="btn btn-dark btn-lg fw-bold">Registrarse</button>
-              </div>
-            </form>
-
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </main>
+    </section>
+
   <div class="carroTab">
         <h1>Carrito</h1>
         <div class="listaCarro">

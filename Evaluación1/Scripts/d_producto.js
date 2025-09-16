@@ -63,7 +63,6 @@ const agregarCarritoHTML = () => {
             let productoInfo = listaProductos[posicionProducto];
             nuevoProductoCarro.innerHTML = `
             <div class="image">
-                
                 <img src="${productoInfo.imagen}" class="img-fluid" >
             </div>
             <div class="name">

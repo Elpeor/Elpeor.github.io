@@ -138,3 +138,142 @@ body.mostrarCarro .carroTab{
 .carroTab .btn .cerrar{
     background-color: #eee;
 }
+/* registro */
+.registration-section {
+            padding: 100px 0;
+            background: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .registration-container {
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .registration-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .registration-form::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: rgb(156, 11, 11);
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control,
+        .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1rem 0.75rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #9c0b0b;
+            box-shadow: 0 0 0 0.2rem rgba(156, 11, 11, 0.25);
+            background-color: #fff;
+        }
+
+        .form-control::placeholder {
+            color: #adb5bd;
+            opacity: 1;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            min-height: 1rem;
+        }
+
+        .btn-submit {
+            background: #9c0b0b;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #a01729, #c82333);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .form-row {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+@media (max-width: 768px) {
+            .registration-container {
+                max-width: 95%;
+            }
+            
+            .registration-form {
+                padding: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+.form-control.is-valid,
+        .form-select.is-valid {
+            border-color: #198754;
+        }
+
+        .form-control.is-invalid,
+        .form-select.is-invalid {
+            border-color: #dc3545;
+        }
