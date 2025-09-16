@@ -1,0 +1,79 @@
+/* ======= RESET BÁSICO ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======= ESTILO GENERAL ======= */
+body {
+    background-color: white; /* Fondo blanco */
+    color: #111; /* Texto negro */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ======= CONTENEDOR PRINCIPAL ======= */
+#casos {
+    display: flex;
+    flex-direction: column; /* Apilar en columna */
+    gap: 20px;
+    max-width: 700px; /* Ancho máximo más compacto */
+    margin: 0 auto;
+}
+
+/* ======= TARJETAS DE CASOS ======= */
+#casos > div {
+    background: #f9f9f9; /* Fondo gris muy claro */
+    border: 2px solid navy; /* Azul oscuro */
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#casos > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* ======= TITULOS ======= */
+#casos h4 {
+    color: navy;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ======= PÁRRAFOS ======= */
+#casos p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* ======= IMÁGENES ======= */
+#casos img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid gold; /* Dorado */
+    margin-bottom: 12px;
+}
+
+/* ======= BOTONES ======= */
+button {
+    background: red; /* Botones rojos */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: gold;
+    color: black;
+    transform: scale(1.05);
+}
