@@ -1,5 +1,6 @@
 // Lista con dominios de correo validos
 const dominioCorreo = ["@duoc.cl","@gmail.com","@profesor.duoc.cl"];
+// Validacion nombre
 function valNombreContacto(){
     const characters = /^[\p{L}\s]+$/u;
     let mensaje = document.getElementById("mensajeNombre");
