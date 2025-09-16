@@ -52,5 +52,23 @@
     "nombre": "Pasta alla puttanesca",
     "precio": 9990,
     "imagen": "IMG/puttanesca.jpg"
+},
+{
+    "id": 10,
+    "nombre": " raviolles",
+    "precio": 10990,
+    "imagen": "IMG/ravioles.jpg"
+},
+{
+    "id": 11,
+    "nombre": "ensalada caprese",
+    "precio": 8990,
+    "imagen": "IMG/ensalada_caprese.jpg"
+},
+{
+    "id": 12,
+    "nombre": "ensalada césar",
+    "precio": 7990,
+    "imagen": "IMG/ensalada_cesar.jpg"
 }
 ]
