@@ -29,11 +29,13 @@ const addDataToHTML = () => {
             // Creacion de la carta del producto
             nuevoProducto.innerHTML = `
             <div id="producto" class="card h-100">
-            <img src="${produ.imagen}" class="card-img-top" alt="">
-            <h5 class="card-title">${produ.nombre}</h5>
-            <p class="card-text">$${produ.precio}</p>
-            <button id="agregarCarro" class="btn btn-dark w-100">Agregar al carrito</button>
-        </div>
+                <a href= "d_producto.html?id=${produ.id}">
+                    <img src="${produ.imagen}" class="card-img-top" alt="">
+                </a>
+                <h5 class="card-title">${produ.nombre}</h5>
+                <p class="card-text">$${produ.precio}</p>
+                <button id="agregarCarro" class="btn btn-dark w-100">Agregar al carrito</button>
+            </div>
         `;
         // Agrega la nueva carta a la lista de productos HTML
             listaProductosHTML.appendChild(nuevoProducto);
@@ -70,18 +72,19 @@ const agregarCarritoHTML = () => {
             let posicionProducto = listaProductos.findIndex((value) => value.id == produCarro.productoId);
             let productoInfo = listaProductos[posicionProducto];
             nuevoProductoCarro.innerHTML = `
-             <div class="image">
-                    <img src="${productoInfo.imagen}" class="img-fluid" >
-                </div>
-                <div class="name">
-                    ${productoInfo.nombre}
-                </div>
-                <div class="totalPrice">$${productoInfo.precio * produCarro.cantidad}</div>
-                <div class="cantidad">
-                    <span class="menos"><</span>
-                    <span>${produCarro.cantidad}</span>
-                    <span class="mas">></span>
-                </div>
+            <div class="image">
+                
+                <img src="${productoInfo.imagen}" class="img-fluid" >
+            </div>
+            <div class="name">
+                ${productoInfo.nombre}
+            </div>
+            <div class="totalPrice">$${productoInfo.precio * produCarro.cantidad}</div>
+            <div class="cantidad">
+                <span class="menos"><</span>
+                <span>${produCarro.cantidad}</span>
+                <span class="mas">></span>
+            </div>
             `;
             listaCarrosHTML.appendChild(nuevoProductoCarro);
         })
