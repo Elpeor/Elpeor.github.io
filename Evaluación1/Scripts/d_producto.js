@@ -4,7 +4,9 @@ let producto_id =new URLSearchParams(window.location.search).get("id");
 
 const definirProducto = (producto_id) =>{
     listaProductos.forEach(prod =>{
+        console.log("hola")
         if (prod.id == producto_id) {
+            console.log("adios")
             document.getElementById("nombre_dprod").textContent = prod.nombre
             document.getElementById("precio_dprod").textContent = "$"+prod.precio
             document.getElementById("imagen_dprod").setAttribute("src", prod.imagen)
@@ -17,8 +19,9 @@ const initApp = () => {
     .then(response => response.json())
     .then(data=>{
         listaProductos = data;
+        definirProducto(producto_id);
     })
-    definirProducto(producto_id);
+    
 }
 initApp();
 
