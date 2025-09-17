@@ -1,6 +1,6 @@
 var blogs = [
-    {"id":1, "titulo":"Pronto a anunciarse ganador del concurso","descripcion":"En unas horas se anunciará al ganador del sortéo de un mes gratis de pedidos en El Italiano", "imagen":"IMG/sorteo.jpg", "boton":"BOT_sorte"},
-    {"id":2, "titulo":"Comida recalentada?","descripcion":"Se sospecha que El italiano utiliza platos pre-hechos y que los recalienta en microondas a la hora de servirlos", "imagen":"IMG/recalentao.jpg", "boton":"BOT_recal"}
+    {"id":1, "titulo":"Proximamente sorteo de cena gratis","descripcion":"En los siguientes dias daremos a conocer las bases de nuestro concurso que ofrecerá una cena gratis en El Italiano. Esta cena será una experiencia única, con un menú exclusivo preparado por nuestros chefs. ¡Mantente atento a nuestras redes sociales para más detalles!", "imagen":"IMG/sorteo.jpg", "boton":"BOT_sorte"},
+    {"id":2, "titulo":"El plato mejor calificado por Anthony Bourdain","descripcion":"Te contamos sobre el plato que enamoró al chef mundialmente conocido, Anthony Bourdain. El chef lo describió como una explosión de sabores y una verdadera obra maestra de la cocina italiana. Al degustar nuestra Lasagna, se siente una combinación perfecta de sabores y texturas que la hacen inolvidable. El chef Anthony Bourdain exclamó \"¡Esta lasagna es increíble!\".", "imagen":"IMG/lasagna.jpg", "boton":"BOT_recal"}
 ];
 
 window.localStorage.setItem("blogs",JSON.stringify(blogs))
@@ -16,3 +16,14 @@ blogs.forEach(blog =>{
             })
         }
     })
+
+let iconoCarro = document.querySelector(".icon-cart")
+let cerrarCarro = document.querySelector(".cerrar");
+let body = document.querySelector("body");
+// Listener para abrir y cerrar el carro
+iconoCarro.addEventListener("click", ()=>{
+    body.classList.toggle("mostrarCarro")
+})
+cerrarCarro.addEventListener("click", ()=>{
+    body.classList.toggle("mostrarCarro")
+})

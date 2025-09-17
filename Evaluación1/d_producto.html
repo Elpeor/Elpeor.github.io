@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="Styles/productoStyle.css">
+    <link rel="stylesheet" href="Styles/dProductoStyle.css">
 </head>
-<body>
-
+<body class="">
     <!---- navbar ----->
-    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+ <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container">
         <div class="d-flex align-items-center justify-content-between w-100">
-            <a class="navbar-brand" href="principal.html">El Italiano</a>
+            <a class="navbar-brand" href="principal.html">
+              <img src="IMG/logoItaliano.png" alt="El Italiano" width="70" height="70" class="me-2">
+              <span class="brandNav">El Italiano</span>
+            </a>
             <div class="d-flex align-items-center">
                 <div class="icon-cart">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -42,40 +45,54 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
                 </ul>
             </div>
+        </div>
     </nav>
 
 
-    <div id="app"></div>
-    <div id="contenidoTemporal">
-        <h2 id="titulo_dprod" class="titulo">
-            producto detalle
-        </h2>
-        <div id="temporal" class="col">
-            <div  class="imagen">
-                <img id="imagen_dprod" src="IMG/redacted.png" alt="" width="1000">
-            </div>
-            <div class="contenido">
-                <div id="precio_dprod" class="precio">1000</div>
-                <div class="botones">
-                    <button id="agregarCarro" class="btn btn-dark w-100">Agregar al carrito</button>
-
-                </div>
-                <div  class="descripcion">
-                    descripción genérica
-                </div>
-            </div>
-        </div>
-
-        <div class="listaProductos">
+   <div id="app">
+        <div id="contenidoTemporal">
+            <h2 id="titulo_dprod" class="titulo h1 mb-4">
+                producto detalle
+            </h2>
             
+            <div id="temporal" class="product-card">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                <div class="imagen">
+                     <img id="imagen_dprod" src="IMG/redacted.png" class="img-fluid">
+                </div>
+                </div>
+                <div class="col-lg-6">
+                <div class="contenido">
+                    <div class="mb-3">
+                    <div id="precio_dprod" class="precio">1000</div>
+                    <small class="price-label">Precio por porcion</small>
+                    </div>
+                    <div class="botones">
+                        <button id="agregarCarro" class="btn-dark w-100">
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                    <div class="descripcion">
+                        descripción genérica
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="listaProductos">
+                
+            </div>
         </div>
     </div>
-
-
-    <!--Carro tab-->
-    <div class="carroTab">
+<!--carrito-->
+<div class="carroTab">
         <h1>Carrito</h1>
         <div class="listaCarro">
             <div class="producto">
@@ -86,38 +103,9 @@
             <button class="checkOut">CHECKOUT</button>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="col-sm-4 col-6">
-        <div class="card h-100 shadow-lg border-0 rounded-4 position-relative bg-light">
-            <div class="overflow-hidden position-relative">
-                <img id="IMG_producto" class="card-img-top rounded-top-4" src="" alt="REDACTED">
-                
-            </div>
-                            
-            <div class="card-body text-center d-flex flex-column">
-                <h5 id="NOM_producto" class="card-title fw-bold ">REDACTED</h5>
-                <span id="PRE_producto" class="text-primary fs-5 fw-bold">$11.590</span>
-
-                <button class="btn btn-primary mt-auto rounded-pill fw-bold" data-cart-control="load-item" data-menu-id="920">
-                    <i class="fas fa-shopping-cart me-1"></i> ¡Pídelo ya!
-                </button>
-            </div>
-        </div>
-    </div> -->
-    
+    <!-- Footer -->
+  <footer class="py-4 text-center text-white" style="background-color: rgba(44,62,80,0.95);">
+    <p class="mb-0">&copy; 2025 El Italiano - Todos los derechos reservados</p>
     <script src="Scripts/d_producto.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
