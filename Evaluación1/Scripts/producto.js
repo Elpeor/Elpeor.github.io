@@ -9,6 +9,7 @@ let body = document.querySelector("body");
 //listas 
 let listaProductos = [];
 let productosCarro = [];
+
 // Listener para abrir y cerrar el carro
 iconoCarro.addEventListener("click", ()=>{
     body.classList.toggle("mostrarCarro")
@@ -58,11 +59,17 @@ const agregarCarrito = (producto_id) =>{
         productosCarro[posicionEnCarro].cantidad += 1;
     }
     agregarCarritoHTML();
+    carroALocal();
+}
+
+const carroALocal = () => {
+    window.localStorage.setItem("productosCarrito", JSON.stringify(productosCarro))
 }
 
 const agregarCarritoHTML = () => {
     listaCarrosHTML.innerHTML = "";
     let cantidadTotal = 0;
+    var precioTotal = 0;
     if(productosCarro.length > 0){
         productosCarro.forEach(produCarro=>{
             cantidadTotal += produCarro.cantidad;
@@ -71,6 +78,7 @@ const agregarCarritoHTML = () => {
             nuevoProductoCarro.dataset.id = produCarro.productoId;
             let posicionProducto = listaProductos.findIndex((value) => value.id == produCarro.productoId);
             let productoInfo = listaProductos[posicionProducto];
+            precioTotal += productoInfo.precio * produCarro.cantidad
             nuevoProductoCarro.innerHTML = `
             <div class="image">
                 <img src="${productoInfo.imagen}" class="img-fluid" >
@@ -88,6 +96,7 @@ const agregarCarritoHTML = () => {
             listaCarrosHTML.appendChild(nuevoProductoCarro);
         })
     }
+    document.getElementById("precioTotal").textContent = precioTotal
     iconoCarroCantidad.innerText = cantidadTotal;
 }
 
@@ -110,6 +119,7 @@ listaCarrosHTML.addEventListener("click", (e)=>{
             type = "mas";
         }
         cambiarCantidad(productoId, type);
+        carroALocal();
     }
 })
 const cambiarCantidad = (productoId, type)=>{
@@ -138,9 +148,18 @@ const initApp = () => {
     .then(data=>{
         listaProductos = data;
         addDataToHTML();
+
+        if (JSON.parse(window.localStorage.getItem("productosCarrito"))){
+            productosCarro = JSON.parse(window.localStorage.getItem("productosCarrito"))
+            agregarCarritoHTML()
+        }
+
     })
 }
 initApp();
+
+
+
 /*
 window.localStorage.setItem("productos",JSON.stringify(productos))
 

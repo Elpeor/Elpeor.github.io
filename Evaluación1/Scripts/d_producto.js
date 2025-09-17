@@ -46,7 +46,14 @@ const agregarCarrito = (producto_id) =>{
         productosCarro[posicionEnCarro].cantidad += 1;
     }
     agregarCarritoHTML();
+    carroALocal();
 }
+
+const carroALocal = () => {
+    window.localStorage.setItem("productosCarrito", JSON.stringify(productosCarro))
+}
+
+
 
 const agregarCarritoHTML = () => {
     listaCarrosHTML.innerHTML = "";
@@ -135,6 +142,10 @@ const initApp = () => {
     .then(data=>{
         listaProductos = data;
         definirProducto(producto_id);
+        if (JSON.parse(window.localStorage.getItem("productosCarrito"))){
+            productosCarro = JSON.parse(window.localStorage.getItem("productosCarrito"))
+            agregarCarritoHTML()
+        }  
     })
     
 }
