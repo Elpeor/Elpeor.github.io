@@ -236,4 +236,48 @@ body.mostrarCarro .carroTab{
             justify-content: center;
             gap: 0.5rem;
         }
+/* Estilos para la lista de productos en el carrito */
+.carroTab .listaCarro .producto .image{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 8px;
+
+}
+.carroTab .listaCarro .producto .image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.carroTab .listaCarro .producto{
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+.listaCarro .cantidad span{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.listaCarro .cantidad span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+}
+.listaCarro .producto:nth-child(even){
+    background-color: #eee1;
+}
+.listaCarro{
+    overflow: auto;
+
+}
+.listaCarro::-webkit-scrollbar{
+    width: 0;
+}
 

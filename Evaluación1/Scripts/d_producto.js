@@ -58,6 +58,7 @@ const carroALocal = () => {
 const agregarCarritoHTML = () => {
     listaCarrosHTML.innerHTML = "";
     let cantidadTotal = 0;
+    let precioTotal = 0;
     if(productosCarro.length > 0){
         productosCarro.forEach(produCarro=>{
             cantidadTotal += produCarro.cantidad;
@@ -66,7 +67,7 @@ const agregarCarritoHTML = () => {
             nuevoProductoCarro.dataset.id = produCarro.productoId;
             let posicionProducto = listaProductos.findIndex((value) => value.id == produCarro.productoId);
             let productoInfo = listaProductos[posicionProducto];
-            //productoInfo = undefined
+            precioTotal += productoInfo.precio * produCarro.cantidad;
             nuevoProductoCarro.innerHTML = `
             <div class="image">
                 <img src="${productoInfo.imagen}" class="img-fluid" >
@@ -84,6 +85,7 @@ const agregarCarritoHTML = () => {
             listaCarrosHTML.appendChild(nuevoProductoCarro);
         })
     }
+    document.getElementById("precioTotal").textContent = precioTotal
     iconoCarroCantidad.innerText = cantidadTotal;
 }
 
