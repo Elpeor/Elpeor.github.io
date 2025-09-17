@@ -23,10 +23,22 @@ body {
     margin: 0 auto;
 }
 
+
+.fila {
+    display: flex;
+    gap: 20px;
+}
+
+/* ===== LOS DIVS DENTRO DE LA FILA ===== */
+.fila > div {
+    flex: 1; /* Para que ocupen el mismo ancho */
+}
+
+
+
 /* ======= TARJETAS DE CASOS ======= */
 #casos > div {
     background: #f9f9f9; /* Fondo gris muy claro */
-    border: 2px solid navy; /* Azul oscuro */
     border-radius: 12px;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -40,7 +52,7 @@ body {
 
 /* ======= TITULOS ======= */
 #casos h4 {
-    color: navy;
+    color: rgb(0, 0, 10);
     margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
@@ -62,7 +74,7 @@ body {
 
 /* ======= BOTONES ======= */
 button {
-    background: red; /* Botones rojos */
+    background: rgb(12, 0, 0); /* Botones rojos */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -73,7 +85,7 @@ button {
 }
 
 button:hover {
-    background: gold;
-    color: black;
+    background: rgba(15, 15, 14, 0.836);
+    color: rgb(255, 255, 255);
     transform: scale(1.05);
 }
