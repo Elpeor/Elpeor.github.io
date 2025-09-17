@@ -124,6 +124,7 @@ const definirProducto = (producto_id) =>{
             document.getElementById("titulo_dprod").textContent = prod.nombre
             document.getElementById("precio_dprod").textContent = "$"+prod.precio
             document.getElementById("imagen_dprod").setAttribute("src", prod.imagen)
+            document.getElementById("descripcion_dprod").textContent = prod.descripcion
         }
     })
 }
