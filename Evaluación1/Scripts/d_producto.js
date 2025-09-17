@@ -23,10 +23,8 @@ document.getElementById("agregarCarro").addEventListener("click", (event)=>{
     let posicionClick = event.target;
     if(posicionClick.classList.contains("btn-dark")){
         let productoCol = posicionClick.closest(".col");
-        console.log(productoCol)
         if(productoCol){
             let productoId = productoCol.id;
-            console.log(productoId)
             agregarCarrito(productoId);
         }
     }
@@ -61,6 +59,7 @@ const agregarCarritoHTML = () => {
             nuevoProductoCarro.dataset.id = produCarro.productoId;
             let posicionProducto = listaProductos.findIndex((value) => value.id == produCarro.productoId);
             let productoInfo = listaProductos[posicionProducto];
+            //productoInfo = undefined
             nuevoProductoCarro.innerHTML = `
             <div class="image">
                 <img src="${productoInfo.imagen}" class="img-fluid" >
@@ -121,9 +120,7 @@ const cambiarCantidad = (productoId, type)=>{
 
 const definirProducto = (producto_id) =>{
     listaProductos.forEach(prod =>{
-        console.log("hola")
         if (prod.id == producto_id) {
-            console.log("adios")
             document.getElementById("titulo_dprod").textContent = prod.nombre
             document.getElementById("precio_dprod").textContent = "$"+prod.precio
             document.getElementById("imagen_dprod").setAttribute("src", prod.imagen)

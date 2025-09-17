@@ -97,7 +97,6 @@ listaProductosHTML.addEventListener("click", (event)=>{
         let productoCol = posicionClick.closest(".col");
         if(productoCol){
             let productoId = productoCol.dataset.id;
-            console.log(productoId)
             agregarCarrito(productoId);
         }
     }
