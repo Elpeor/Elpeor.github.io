@@ -216,3 +216,15 @@ body.mostrarCarro .carroTab{
 .listaCarro::-webkit-scrollbar{
     width: 0;
 }
+.totalPrice{
+    background-color: rgba(38, 53, 68, 0.95);
+    border-radius: 15px;
+    font-size: larger;
+    padding: 5px 10px;
+    border: none;
+    backdrop-filter: blur(20px);
+}
+.totalPrice h5{
+    font-size: 1.25rem;
+    font-weight: bold;
+}

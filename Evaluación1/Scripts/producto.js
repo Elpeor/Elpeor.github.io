@@ -96,7 +96,7 @@ const agregarCarritoHTML = () => {
             listaCarrosHTML.appendChild(nuevoProductoCarro);
         })
     }
-    document.getElementById("precioTotal").textContent = precioTotal
+    document.getElementById("precioTotal").textContent = "Precio total: $" + precioTotal;
     iconoCarroCantidad.innerText = cantidadTotal;
 }
 
